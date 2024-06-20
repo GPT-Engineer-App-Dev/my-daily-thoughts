@@ -4,7 +4,7 @@ import { Link as RouterLink } from "react-router-dom";
 
 const Index = ({ posts }) => {
   return (
-    <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
+    <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center" bg={useColorModeValue("gray.100", "gray.900")} color={useColorModeValue("black", "white")}>
       <VStack spacing={4}>
         <Box boxSize="150px">
           <Image src="/images/profile.jpg" alt="Profile Picture" borderRadius="full" />
