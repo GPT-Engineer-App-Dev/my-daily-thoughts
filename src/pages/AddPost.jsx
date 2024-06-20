@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Container, VStack, Heading, Input, Textarea, Button, useToast } from "@chakra-ui/react";
+import { Container, VStack, Heading, Input, Textarea, Button, useToast, useColorModeValue } from "@chakra-ui/react";
 
 const AddPost = ({ addPost }) => {
   const [title, setTitle] = useState("");
@@ -31,7 +31,7 @@ const AddPost = ({ addPost }) => {
   };
 
   return (
-    <Container centerContent>
+    <Container centerContent bg={useColorModeValue("gray.100", "gray.900")} color={useColorModeValue("black", "white")}>
       <VStack spacing={4} as="form" onSubmit={handleSubmit}>
         <Heading as="h1" size="xl">Add New Post</Heading>
         <Input
