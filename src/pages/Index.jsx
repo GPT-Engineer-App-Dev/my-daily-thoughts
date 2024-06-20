@@ -2,7 +2,7 @@ import { Container, VStack, Heading, Text, Box, Image, Link, Button, useColorMod
 import { FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
 import { Link as RouterLink } from "react-router-dom";
 
-const Index = ({ posts }) => {
+const Index = ({ posts, deletePost }) => {
   return (
     <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center" bg={useColorModeValue("gray.100", "gray.900")} color={useColorModeValue("black", "white")}>
       <VStack spacing={4}>
@@ -30,6 +30,7 @@ const Index = ({ posts }) => {
             <Box key={index} p={5} shadow="md" borderWidth="1px" w="100%">
               <Heading fontSize="xl">{post.title}</Heading>
               <Text mt={4}>{post.content}</Text>
+              <Button colorScheme="red" onClick={() => deletePost(index)}>Delete</Button>
             </Box>
           ))}
         </VStack>
